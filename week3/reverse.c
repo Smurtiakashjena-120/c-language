@@ -2,37 +2,19 @@
 #include<math.h>
 int main()
 {
-    int m,n,w,l,r=0;
+    int m,n,rev=0;
     printf("enter the number:");
     scanf("%d",&m);
-    
-    for (n=m;n>0;)
+    for(;m>0;)
     {
-        n=n/10;
-        l++;
+        n=m%10;
+        m=m/10;
+        rev=rev*10+n;
+
     }
-    l-=1;
-    printf(" the length is%d \n",l);
-     for(;l>=0;l--,m=m/10)
-    {
-        
-        w=m%10;
-       r+=(w)*pow(10,3);
-        
-        
-       
-       
-
-
-        }
-        printf("reverse is :%d",r);
+    
+    
+        printf("reverse is :%d",rev);
    
-    
-    
-
-   
-
-
-    
     return 0;
 }
